@@ -20,11 +20,11 @@ const routes: Routes = [
     component:ProductlistComponent
   },
   {
-    path:"productedit",
+    path:"productedit/:id",
     component:ProducteditComponent
   },
   {
-    path:"productview",
+    path:"productview/:id",
     component:ProductviewComponent
   },
   {
@@ -36,11 +36,11 @@ const routes: Routes = [
     component:UserlistComponent
   },
   {
-    path:"useredit",
+    path:"useredit/:id",
     component:UsereditComponent
   },
   {
-    path:"userview",
+    path:"userview/:id",
     component:UserviewComponent
   },
   {

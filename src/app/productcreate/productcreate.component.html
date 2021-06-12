@@ -6,17 +6,25 @@
     <h2>New Product Create </h2>
     <form action="/action_page.php">
       <div class="form-group">
-        <label for="email">Product Name</label>
-        <input type="email" class="form-control" id="email" placeholder="Enter Product Name" name="email">
+        <label for="">Product Name</label>
+        <input type="text" class="form-control">
       </div>
       <div class="form-group">
-        <label for="pwd">Product Id</label>
-        <input type="password" class="form-control" id="pwd" placeholder="Enter your id" name="pwd">
+        <label for="">Price</label>
+        <input type="text" class="form-control">
       </div>
       <div class="form-group">
-        <label for="pwd">Email</label>
-        <input type="password" class="form-control" id="pwd" placeholder="Enter email" name="pwd">
+        <label for="">Discount</label>
+        <input type="password" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="">Type</label>
+        <select class="form-control">
+          <option value="el">Electronic</option>
+          <option value="ga">Gadget</option>
+        </select>
       </div><br>
+      
       <button type="submit" class="btn btn-success">Submit</button>
     </form>
   </div>

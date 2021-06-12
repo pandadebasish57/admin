@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import {FormBuilder, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-productcreate',
@@ -7,11 +8,11 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./productcreate.component.css']
 })
 export class ProductcreateComponent implements OnInit {
-  currentProductcreate=0;
-  constructor(private activatedRoute:ActivatedRoute) { }
+  productForm:FormGroup=new FormGroup({})
+  constructor() { }
 
   ngOnInit(): void {
-    this.currentProductcreate=this.activatedRoute.snapshot.params.id
+
   }
 
 }
