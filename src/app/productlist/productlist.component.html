@@ -21,7 +21,7 @@
         <td>{{product.type}}</td>
         <td>
           <a [routerLink]="['/productedit',product.id]"><button>Edit</button></a>&nbsp;
-          <a routerLink="/"><button>Delete</button></a>&nbsp;
+          <button (click)="deleteRow(product)">Delete</button>&nbsp;
         </td>
       </tr>
     </tbody>

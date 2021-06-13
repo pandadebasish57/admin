@@ -13,5 +13,9 @@ export class UserlistComponent implements OnInit {
   ngOnInit(): void {
     this.userList=this.userService.returnUser();
   }
+  deleteRow(user:any){
+    const index = this.userList.indexOf(user);
+    this.userList.splice(index, 1);
+}
 
 }

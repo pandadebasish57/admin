@@ -21,7 +21,7 @@
         <td>{{user.address}}</td>
         <td>
           <a [routerLink]="['/useredit',user.id]"><button>Edit</button></a>&nbsp;
-          <a routerLink="/"><button>Delete</button></a>&nbsp;
+          <button (click)="deleteRow(user)">Delete</button>&nbsp;
         </td>
       </tr>
     </tbody>

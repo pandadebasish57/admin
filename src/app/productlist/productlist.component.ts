@@ -13,5 +13,9 @@ export class ProductlistComponent implements OnInit {
   ngOnInit(): void {
     this.productList=this.productService.returnProduct();
   }
+  deleteRow(product:any){
+    const index = this.productList.indexOf(product);
+    this.productList.splice(index, 1);
+}
 
 }
