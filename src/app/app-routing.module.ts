@@ -16,6 +16,10 @@ const routes: Routes = [
     component:DashboardComponent
   },
   {
+    path:"",
+    component:DashboardComponent
+  },
+  {
     path:"productlist",
     component:ProductlistComponent
   },
