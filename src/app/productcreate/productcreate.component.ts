@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import {FormBuilder, FormGroup} from '@angular/forms';
+import { Router } from '@angular/router';
+import {FormBuilder} from '@angular/forms';
+import { ProductService } from '../product.service';
 
 @Component({
   selector: 'app-productcreate',
@@ -8,11 +9,21 @@ import {FormBuilder, FormGroup} from '@angular/forms';
   styleUrls: ['./productcreate.component.css']
 })
 export class ProductcreateComponent implements OnInit {
-  productForm:FormGroup=new FormGroup({})
-  constructor() { }
+  fb:FormBuilder=new FormBuilder;
+  productForm:any;
+  constructor(private productService:ProductService,private route:Router) { }
 
   ngOnInit(): void {
-
+    this.productForm=this.fb.group({
+      "productname":this.fb.control(""),
+      "productprice":this.fb.control(""),
+      "discount":this.fb.control("0"),
+      "type":this.fb.control("")
+    })
+  }
+  submitForm(){
+    this.productService.addProduct(this.productForm.value);
+    this.route.navigate(["/productlist"])
   }
 
 }

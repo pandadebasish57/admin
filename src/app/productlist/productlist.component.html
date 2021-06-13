@@ -6,15 +6,19 @@
 <table class="table table-striped">
     <thead>
       <tr>
-        <th scope="col">#</th>
         <th scope="col">Product Name</th>
+        <th scope="col">Product Price</th>
+        <th scope="col">Discount</th>
+        <th scope="col">Type</th>
         <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <a style="text-decoration: none;"routerLink="/productview/1"><td>Mark</td></a>
+      <tr *ngFor="let product of productList">
+        <a style="text-decoration: none;"routerLink="/productview/1"><td>{{product.productname}}</td></a>
+        <td>{{product.productprice}}</td>
+        <td>{{product.discount}}</td>
+        <td>{{product.type}}</td>
         <td>
           <a routerLink="/productedit/1"><button>Edit</button></a>&nbsp;
           <a routerLink="/"><button>Delete</button></a>&nbsp;
