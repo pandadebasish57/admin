@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import {FormBuilder} from '@angular/forms';
+import {FormBuilder, Validators} from '@angular/forms';
 import { ProductService } from '../product.service';
 
 @Component({
@@ -15,9 +15,9 @@ export class ProductcreateComponent implements OnInit {
 
   ngOnInit(): void {
     this.productForm=this.fb.group({
-      "productname":this.fb.control(""),
-      "productprice":this.fb.control(""),
-      "discount":this.fb.control("0"),
+      "productname":this.fb.control("",Validators.required),
+      "productprice":this.fb.control(0,Validators.required),
+      "discount":this.fb.control(0,[Validators.min(0),Validators.max(5)]),
       "type":this.fb.control("")
     })
   }

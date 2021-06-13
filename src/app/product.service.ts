@@ -4,12 +4,21 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ProductService {
-  productData:Array<Object>=[];
+  productData:Array<any>=[];
   constructor() { }
-  addProduct(data:object){
+  addProduct(data:any){
+    data.id=this.productData.length+1;
     this.productData.push(data);
   }
   returnProduct(){
     return this.productData;
+  }
+  returnProductById(id:number){
+    return this.productData.find(p=>p.id==id)
+  }
+  updateProductById(id:any,data:any){
+    let index=this.productData.findIndex(p=>p.id==id);
+    data.id=id;
+    this.productData[index]=data;
   }
 }

@@ -20,7 +20,7 @@
         <td>{{product.discount}}</td>
         <td>{{product.type}}</td>
         <td>
-          <a routerLink="/productedit/1"><button>Edit</button></a>&nbsp;
+          <a [routerLink]="['/productedit',product.id]"><button>Edit</button></a>&nbsp;
           <a routerLink="/"><button>Delete</button></a>&nbsp;
         </td>
       </tr>
