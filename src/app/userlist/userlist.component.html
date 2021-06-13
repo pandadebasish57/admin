@@ -1,9 +1,9 @@
-<h1 class="mt-4">User</h1>
-<ol class="breadcrumb mb-4">
+<h1 class="mt-4">User List</h1>
+<!-- <ol class="breadcrumb mb-4">
     <li class="breadcrumb-item active">User List</li>
-</ol>
-<a routerLink="/usercreate"><button>Create new user</button></a>
-<table class="table table-striped">
+</ol> -->
+<a routerLink="/usercreate"><button class="btn btn-info">Create new user</button></a><br><br>
+<table class="table table-dark">
     <thead>
       <tr>
         <th scope="col">User Name</th>
@@ -20,8 +20,8 @@
         <td>{{user.email}}</td>
         <td>{{user.address}}</td>
         <td>
-          <a [routerLink]="['/useredit',user.id]"><button>Edit</button></a>&nbsp;
-          <button (click)="deleteRow(user)">Delete</button>&nbsp;
+          <a [routerLink]="['/useredit',user.id]"><button class="btn btn-warning">Edit</button></a>&nbsp;
+          <button (click)="deleteRow(user)" class="btn btn-danger">Delete</button>&nbsp;
         </td>
       </tr>
     </tbody>

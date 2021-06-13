@@ -2,8 +2,8 @@
 <ol class="breadcrumb mb-4">
     <li class="breadcrumb-item active">Product List</li>
 </ol>
-<a routerLink="/productcreate"><button>Create new Product</button></a>
-<table class="table table-striped">
+<a routerLink="/productcreate"><button class="btn btn-info">Create new Product</button></a>
+<br><br><table class="table table-dark">
     <thead>
       <tr>
         <th scope="col">Product Name</th>
@@ -15,13 +15,14 @@
     </thead>
     <tbody>
       <tr *ngFor="let product of productList">
-        <a style="text-decoration: none;"routerLink="/productview/1"><td>{{product.productname}}</td></a>
+        <td>{{product.productname}}</td>
         <td>{{product.productprice}}</td>
         <td>{{product.discount}}</td>
         <td>{{product.type}}</td>
         <td>
-          <a [routerLink]="['/productedit',product.id]"><button>Edit</button></a>&nbsp;
-          <button (click)="deleteRow(product)">Delete</button>&nbsp;
+          <a [routerLink]="['/productedit',product.id]"><button class="btn btn-warning">Edit</button></a>&nbsp;
+          <a [routerLink]="['/productview',product.id]"><button class="btn btn-secondary">View</button></a>&nbsp;
+          <button (click)="deleteRow(product)" class="btn btn-danger">Delete</button>&nbsp;
         </td>
       </tr>
     </tbody>
