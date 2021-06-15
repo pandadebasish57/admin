@@ -19,7 +19,7 @@
         <td>
           <a [routerLink]="['/productedit',product.id]"><button class="btn btn-warning">Edit</button></a>&nbsp;
           <a [routerLink]="['/productview',product.id]"><button class="btn btn-secondary">View</button></a>&nbsp;
-          <button (click)="deleteRow(product)" class="btn btn-danger">Delete</button>&nbsp;
+          <button (click)="deleteprod(product.id)" class="btn btn-danger">Delete</button>&nbsp;
         </td>
       </tr>
     </tbody>

@@ -1,24 +1,24 @@
 import { Injectable } from '@angular/core';
-
+import {HttpClient} from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
   userData:Array<any>=[]
-  constructor() { }
+  constructor(private http:HttpClient) { }
   addUser(data:any){
-    data.id=this.userData.length+1;
-    this.userData.push(data);
+    return this.http.post(`https://60c7738bafc88600179f5265.mockapi.io/user`,data)
   }
   returnUser(){
-    return this.userData;
+    return this.http.get(`https://60c7738bafc88600179f5265.mockapi.io/user`)
   }
   returnUserById(id:number){
-    return this.userData.find(u=>u.id==id)
+    return this.http.get(`https://60c7738bafc88600179f5265.mockapi.io/user/${id}`)
   }
   updateUserById(id:any,data:any){
-    let index=this.userData.findIndex(u=>u.id==id);
-    data.id=id;
-    this.userData[index]=data;
+    return this.http.put(`https://60c7738bafc88600179f5265.mockapi.io/user/${id}`,data)
+  }
+  deleteById(id:any){
+    return this.http.delete(`https://60c7738bafc88600179f5265.mockapi.io/user/${id}`)
   }
 }

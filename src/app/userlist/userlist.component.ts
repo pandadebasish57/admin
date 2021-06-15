@@ -11,11 +11,18 @@ export class UserlistComponent implements OnInit {
   constructor(private userService:UserService) { }
 
   ngOnInit(): void {
-    this.userList=this.userService.returnUser();
+    this.loadUser()
+    
   }
-  deleteRow(user:any){
-    const index = this.userList.indexOf(user);
-    this.userList.splice(index, 1);
+  loadUser(){
+    this.userService.returnUser().subscribe((res:any)=>{
+      this.userList=res
+    });
+  }
+  deleteuser(id:any){
+    this.userService.deleteById(id).subscribe(()=>{
+      this.loadUser()
+    })
 }
 
 }

@@ -17,6 +17,9 @@ import { UsercreateComponent } from './usercreate/usercreate.component';
 import { UsereditComponent } from './useredit/useredit.component';
 import { UserviewComponent } from './userview/userview.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,12 +36,15 @@ import { ReactiveFormsModule } from '@angular/forms';
     UserlistComponent,
     UsercreateComponent,
     UsereditComponent,
-    UserviewComponent
+    UserviewComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

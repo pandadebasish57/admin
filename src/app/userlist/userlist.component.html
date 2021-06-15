@@ -15,13 +15,14 @@
     </thead>
     <tbody>
       <tr *ngFor="let user of userList">
-        <a style="text-decoration: none;"routerLink="/userview/1"><td>{{user.username}}</td></a>
+        <td>{{user.username}}</td>
         <td>{{user.mobile}}</td>
         <td>{{user.email}}</td>
         <td>{{user.address}}</td>
         <td>
           <a [routerLink]="['/useredit',user.id]"><button class="btn btn-warning">Edit</button></a>&nbsp;
-          <button (click)="deleteRow(user)" class="btn btn-danger">Delete</button>&nbsp;
+          <a [routerLink]="['/userview',user.id]"><button class="btn btn-secondary">View</button></a>&nbsp;
+          <button (click)="deleteuser(user.id)" class="btn btn-danger">Delete</button>&nbsp;
         </td>
       </tr>
     </tbody>

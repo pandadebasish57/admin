@@ -12,23 +12,29 @@ export class UsereditComponent implements OnInit {
   fb:FormBuilder=new FormBuilder;
   userForm:any;
   currentId:any;
+  currentUserData:any;
   constructor(private activeRoute:ActivatedRoute,private userService:UserService,private route:Router) { 
     this.currentId=activeRoute.snapshot.params.id
   }
 
   ngOnInit(): void {
-    let currentUserData=this.userService.returnUserById(this.currentId)
     this.userForm=this.fb.group({
       "username":this.fb.control("",Validators.required),
       "mobile":this.fb.control("",Validators.required),
       "email":this.fb.control("",Validators.required),
       "address":this.fb.control("",Validators.required)
     })
-    this.userForm.patchValue(currentUserData)
+    this.userService.returnUserById(this.currentId).subscribe((res)=>{
+      this.currentUserData=res
+      this.userForm.patchValue(this.currentUserData)
+    })
+    
   }
   updateForm(){
-    this.userService.updateUserById(this.currentId,this.userForm.value);
-    this.route.navigate(["/userlist"])
+    this.userService.updateUserById(this.currentId,this.userForm.value).subscribe(()=>{
+      this.route.navigate(["/userlist"])
+    })
+    
   }
 
 }
