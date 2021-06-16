@@ -20,6 +20,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import {HttpClientModule} from '@angular/common/http';
+import { LayoutComponent } from './layout/layout.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import {HttpClientModule} from '@angular/common/http';
     UsereditComponent,
     UserviewComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,

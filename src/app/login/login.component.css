@@ -1,6 +1,7 @@
 .login-container{
     margin-top: 5%;
     margin-left: 20%;
+    overflow: hidden;
 }
 .login-logo{
     position: relative;
@@ -18,6 +19,8 @@
     padding: 9%;
     background:#282726;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+    position:fixed;
+    margin-right: 15%;
 }
 .login-form-1 h3{
     text-align: center;
@@ -46,3 +49,4 @@
     text-decoration:none;
     color:#fff;
 }
+

@@ -23,7 +23,7 @@ export class UsercreateComponent implements OnInit {
   }
   submitForm(){
     this.userService.addUser(this.userForm.value).subscribe((res)=>{
-      this.route.navigate(["/userlist"])
+      this.route.navigate(["dashboard/userlist"])
     })
     
   }
