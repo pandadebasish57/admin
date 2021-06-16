@@ -1,52 +1,136 @@
-.login-container{
-    margin-top: 5%;
-    margin-left: 20%;
-    overflow: hidden;
+.p1 {
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-top:0px;
 }
-.login-logo{
-    position: relative;
-    margin-left: -41.5%;
+
+.title {
+    font-size: 28px;
 }
-.login-logo img{
-    position: absolute;
-    width: 20%;
-    margin-top: 19%;
-    background: #282726;
-    border-radius: 4.5rem;
-    padding: 5%;
+
+.title::after {
+    content: '';
+    background: black;
+    height: 2px;
+    width: 50px;
+    display: block;
+    transform: translateY(8px);
 }
-.login-form-1{
-    padding: 9%;
-    background:#282726;
-    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
-    position:fixed;
-    margin-right: 15%;
-}
-.login-form-1 h3{
+
+.logo {
     text-align: center;
-    margin-bottom:12%;
-    color:#fff;
+    margin-top: 10px;
+   
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+}
+
+h2 {
+    font-size: 20px;
+    font-family: Arial;
 }
 
 
-.btnSubmit{
-    font-weight: 600;
-    width: 50%;
-    color: #282726;
-    background-color: #fff;
-    border: none;
-    border-radius: 1.5rem;
-    padding:2%;
-    margin-left: 25%;
+
+.form-check-label {
+    color: black;
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: 15px;
 }
-.btnForgetPwd{
+
+.form-check a {
+    color:black;
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: -17px;
+}
+
+.form-check input {
+    margin-left: -4px;
+}
+
+.btn {
+    color: black;
     color: #fff;
-    font-weight: 600;
-    text-decoration: none;
-    margin-left: 36%;
+    margin: 0;
+    width: 100%;
+    font-size: 14px;
 }
-.btnForgetPwd:hover{
-    text-decoration:none;
-    color:#fff;
+a {
+    text-decoration: none;
 }
 
+
+
+.form-container {
+    background: #fff;
+    width: 379px;
+    height: 320px;
+    padding: 33px;
+    margin-top: 175px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px 0px  #DFE1E6;
+}
+
+.form-box input{
+    background: #F4F5F7;
+    border-radius: 10px;
+    border: 1px solid  #253858;
+}
+
+.form-group input {
+    background: #F4F5F7;
+    border-radius: 10px;
+    border: 1px solid  #253858;
+}
+
+.son{
+    text-align: center;
+    margin: 0;
+    font-size: 14px;
+    padding:11px;
+    color:#0052CC;
+   }
+
+
+
+.left {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+
+}
+
+.right {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+
+}
+
+h1 {
+   font-family: initial;
+   font-size: 24px;
+}
+.foot{
+    text-align:center;
+    padding-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+    margin-top: 10px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 0;
+    font-size: 12px;
+}
+
+.horizontal{
+margin:auto;
+}

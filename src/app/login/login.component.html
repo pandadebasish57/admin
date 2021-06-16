@@ -1,21 +1,27 @@
-<div class="container login-container" >
-    <div class="row">
-        <div class="col-md-6 login-form-1">
-            <h3>Login Form</h3>
-            <form (submit)="login()">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Your Email *" value="" />
-                </div><br>
-                <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Your Password *" value="" />
-                </div><br>
-                <div class="form-group">
-                    <input type="submit" class="btnSubmit" value="Login" />
-                </div><br>
-                <div class="form-group">
-                    <a href="#" class="btnForgetPwd">Forget Password?</a>
-                </div>
-            </form>   
+
+<div class="container">
+    <div class="row justify-content-center">
+      <form class="form-container" (submit)="login()">
+        <div class="form-box">
+          <h2 class="title">Log in</h2>
+          <div class="form-group">
+            <label for="exampleInputEmail1"></label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+              placeholder="Enter email">
+          </div>
+          
         </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1"></label>
+          <input type="password" class="form-control" id="pwd" placeholder="Password">
+          <hr width="100%">
+        </div>
+        
+        <input id="login-btn" type="submit" class="btn btn-dark d-block" value="Login" style="color: white;">
+        
+        
+      </form>
     </div>
-</div>
+  </div>
+  <img class="left" src="https://www.thedigitalsarathi.com/wp-content/uploads/2020/11/e-com-development.png" width="30%" height="50%">
+  <img class="right" src="https://www.thedigitalsarathi.com/wp-content/uploads/2020/11/e-com-development.png" width="30%" height="50%">
